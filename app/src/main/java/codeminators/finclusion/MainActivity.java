@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
                 switch(item.getItemId()){
                     case R.id.nav_home:
                         return true;
+                    case R.id.nav_bank:
+                        return true;
+                    case R.id.nav_learn:
+                        return true;
                 }
                 return false;
             }
