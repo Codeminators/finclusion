@@ -50,11 +50,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         return true;
                     case R.id.nav_bank:
-                        Intent intent = new Intent();
-                        intent.setClassName("com.bankbazaar.app", "com.bankbazaar.app.mybb.primer.activity.AllCategoriesActivity");
-                        startActivity(intent);
                         return true;
                     case R.id.nav_learn:
+                        openLearnTab();
                         return true;
                 }
                 return false;
@@ -113,6 +111,11 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private void openLearnTab() {
+        Intent intent = new Intent();
+        intent.setClassName("com.bankbazaar.app", "com.bankbazaar.app.mybb.primer.activity.AllCategoriesActivity");
+        startActivity(intent);
+    }
     private double calculateLiveAmount() {
         double rate = 4;
 
