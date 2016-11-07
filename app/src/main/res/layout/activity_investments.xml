@@ -1,86 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_investments"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="codeminators.finclusion.InvestmentsActivity">
+    android:orientation="vertical">
 
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:id="@+id/activity_investments"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:elevation="5dp"
-        android:minHeight="?attr/actionBarSize"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Amount you want to invest"
-        android:textColor="@android:color/black"
-        android:padding="15dp"
-        android:fontFamily="sans-serif-light"
-        android:textSize="18sp"/>
-
-    <com.appyvet.rangebar.RangeBar
-        xmlns:custom="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/rangebarMoney"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        custom:rangeBar="false"
-        android:paddingTop="15dp"
-        custom:tickStart="500"
-        custom:tickEnd="2000"
-        custom:tickInterval="10"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="codeminators.finclusion.InvestmentsActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time you want to invest for"
-        android:textColor="@android:color/black"
-        android:padding="15dp"
-        android:fontFamily="sans-serif-light"
-        android:textSize="18sp"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:elevation="5dp"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <TextView
+            android:id="@+id/investmentDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="15dp"
+            android:text="Amount you want to invest"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rangebarMoney"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:paddingTop="15dp"
+            custom:rangeBar="false"
+            custom:tickEnd="2000"
+            custom:tickInterval="10"
+            custom:tickStart="500" />
 
 
-    <com.appyvet.rangebar.RangeBar
-        xmlns:custom="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/rangebarTime"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        android:layout_marginTop="25dp"
-        custom:rangeBar="false"
-        custom:tickStart="0"
-        custom:tickEnd="100"
-        custom:tickInterval="10"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"/>
-
-    <codeminators.finclusion.GaddiView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:id="@+id/gaddiView"
-        android:src="@drawable/coin_1"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Return on Investment"
-        android:textColor="@android:color/black"
-        android:padding="15dp"
-        android:fontFamily="sans-serif-light"
-        android:textSize="18sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="15dp"
+            android:text="Time you want to invest for"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
 
-</LinearLayout>
+        <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rangebarTime"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="25dp"
+            custom:rangeBar="false"
+            custom:tickEnd="100"
+            custom:tickInterval="10"
+            custom:tickStart="0" />
+
+        <codeminators.finclusion.GaddiView
+            android:id="@+id/gaddiView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:src="@drawable/coin_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="15dp"
+            android:text="Return on Investment"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+
+    </LinearLayout>
+</ScrollView>

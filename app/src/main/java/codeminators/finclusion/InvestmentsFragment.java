@@ -34,21 +34,27 @@ public class InvestmentsFragment extends BottomSheetDialogFragment {
         mlf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), InvestmentsActivity.class));
+                Intent i = (new Intent(getActivity(), InvestmentsActivity.class));
+                i.putExtra("investmentNum", 0);
+                startActivity(i);
                 dismiss();
             }
         });
         ppf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), InvestmentsActivity.class));
+                Intent i = (new Intent(getActivity(), InvestmentsActivity.class));
+                i.putExtra("investmentNum", 1);
+                startActivity(i);
                 dismiss();
             }
         });
         fd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), InvestmentsActivity.class));
+                Intent i = (new Intent(getActivity(), InvestmentsActivity.class));
+                i.putExtra("investmentNum", 2);
+                startActivity(i);
                 dismiss();
             }
         });
