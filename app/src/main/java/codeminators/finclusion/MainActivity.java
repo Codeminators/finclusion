@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
     double initialAmount = 2000;
-    DecimalFormat df = new DecimalFormat("0.0");
+    DecimalFormat df = new DecimalFormat("0.00000000");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_investments"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context="codeminators.finclusion.InvestmentsActivity">
 
-</RelativeLayout>
+    <com.appyvet.rangebar.RangeBar
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rangebarMoney"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        custom:rangeBar="false"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <com.appyvet.rangebar.RangeBar
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rangebarTime"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="25dp"
+        custom:rangeBar="false"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+    <codeminators.finclusion.GaddiView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gaddiView"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return on Investment"/>
+
+
+</LinearLayout>
