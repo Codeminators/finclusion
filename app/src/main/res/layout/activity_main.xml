@@ -32,6 +32,31 @@
             android:gravity="center"
             android:textColor="@color/colorPrimary"
             android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Net Balance - ₹2000" />
+
+        <Button
+            android:id="@+id/btn_invest_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Invest More"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btn_kys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Know Your Scheme"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <android.support.design.widget.NavigationView

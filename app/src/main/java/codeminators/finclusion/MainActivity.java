@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.robinhood.ticker.TickerUtils;
 import com.robinhood.ticker.TickerView;
@@ -80,6 +81,23 @@ public class MainActivity extends AppCompatActivity {
 
         //calling sync state is necessay or else your hamburger icon wont show up
         actionBarDrawerToggle.syncState();
+
+        Button kysButton = (Button) findViewById(R.id.btn_kys);
+        Button investmentsButton = (Button) findViewById(R.id.btn_invest_more);
+
+        kysButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, SchemesActivity.class));
+            }
+        });
+
+        investmentsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // show bottom sheet dialog
+            }
+        });
 
         tickerView = (TickerView) findViewById(R.id.tickerView);
         tickerView.setCharacterList(TickerUtils.getDefaultListForUSCurrency());
