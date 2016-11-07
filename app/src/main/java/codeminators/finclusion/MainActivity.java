@@ -109,6 +109,13 @@ public class MainActivity extends AppCompatActivity {
         intent.setClassName("org.bom.india_hackaton", "org.bom.india_hackaton.activities.LoginActivity");
         startActivity(intent);
     }
+
+    private void openLearnTab() {
+        Intent intent = new Intent();
+        intent.setClassName("com.bankbazaar.app", "com.bankbazaar.app.mybb.primer.activity.AllCategoriesActivity");
+        startActivity(intent);
+    }
+    
     private Runnable liveAmount = new Runnable() {
         @Override
         public void run() {
@@ -117,11 +124,6 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private void openLearnTab() {
-        Intent intent = new Intent();
-        intent.setClassName("com.bankbazaar.app", "com.bankbazaar.app.mybb.primer.activity.AllCategoriesActivity");
-        startActivity(intent);
-    }
     private double calculateLiveAmount() {
         double rate = 4;
 
