@@ -15,6 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".InvestmentsActivity" />
+        <activity android:name=".SchemesActivity" />
+        <activity android:name=".SchemesListActivity"></activity>
     </application>
 
 </manifest>
