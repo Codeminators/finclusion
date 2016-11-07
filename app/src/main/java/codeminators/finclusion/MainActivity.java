@@ -1,5 +1,6 @@
 package codeminators.finclusion;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         return true;
                     case R.id.nav_bank:
+                        Intent intent = new Intent();
+                        intent.setClassName("com.bankbazaar.app", "com.bankbazaar.app.mybb.primer.activity.AllCategoriesActivity");
+                        startActivity(intent);
                         return true;
                     case R.id.nav_learn:
                         return true;
