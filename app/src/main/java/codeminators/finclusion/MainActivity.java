@@ -1,5 +1,6 @@
 package codeminators.finclusion;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         return true;
                     case R.id.nav_bank:
+                        openBankApplication();
                         return true;
                     case R.id.nav_learn:
                         return true;
@@ -83,6 +85,11 @@ public class MainActivity extends AppCompatActivity {
         handler.post(liveAmount);
     }
 
+    private void openBankApplication() {
+        Intent intent = new Intent();
+        intent.setClassName("org.bom.india_hackaton", "org.bom.india_hackaton.activities.LoginActivity");
+        startActivity(intent);
+    }
     private Runnable liveAmount = new Runnable() {
         @Override
         public void run() {
