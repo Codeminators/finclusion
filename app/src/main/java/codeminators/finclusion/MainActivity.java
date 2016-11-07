@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // show bottom sheet dialog
+                InvestmentsFragment fragment = new InvestmentsFragment();
+                fragment.show(getSupportFragmentManager(),"InvestmentFragment");
             }
         });
 
