@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     private double calculateLiveAmount() {
         double rate = 4;
 
-        double newAmount = initialAmount += 0.3;
+        double newAmount = initialAmount += 0.00000257;
         return newAmount;
     }
 }
