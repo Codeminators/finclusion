@@ -18,6 +18,7 @@
         <activity android:name=".InvestmentsActivity" />
         <activity android:name=".SchemesActivity" />
         <activity android:name=".SchemesListActivity"></activity>
+        <activity android:name=".SchemeDetailActivity"/>
     </application>
 
 </manifest>
