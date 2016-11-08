@@ -68,31 +68,36 @@
         <com.appyvet.rangebar.RangeBar xmlns:custom="http://schemas.android.com/apk/res-auto"
             android:id="@+id/rangebarTime"
             android:layout_width="match_parent"
-            android:layout_height="72dp"
+            android:layout_height="84dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="25dp"
+            android:paddingTop="30dp"
             custom:rangeBar="false"
-            custom:tickEnd="100"
-            custom:tickInterval="10"
-            custom:tickStart="0" />
+            custom:tickEnd="20"
+            custom:tickInterval="1"
+            custom:tickStart="1"
+            custom:pinRadius="21dp"/>
 
         <codeminators.finclusion.GaddiView
             android:id="@+id/gaddiView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
-            android:src="@drawable/coin_1" />
+            android:gravity="center_horizontal"
+            android:visibility="gone"/>
 
         <TextView
+            android:id="@+id/txt_return"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
             android:padding="15dp"
             android:text="Return on Investment"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
 
 
     </LinearLayout>

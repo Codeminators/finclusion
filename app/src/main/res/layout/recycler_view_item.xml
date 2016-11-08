@@ -27,6 +27,9 @@
         android:layout_centerVertical="true"
         android:layout_toEndOf="@+id/optionImage"
         android:layout_toRightOf="@+id/optionImage"
-        android:text="Daughter under 10 years" />
+        android:text="Daughter under 10 years"
+        android:fontFamily="sans-serif-light"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
 
 </RelativeLayout>

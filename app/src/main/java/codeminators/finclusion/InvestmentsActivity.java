@@ -8,11 +8,18 @@ import android.widget.TextView;
 
 import com.appyvet.rangebar.RangeBar;
 
+import java.text.DecimalFormat;
+
 public class InvestmentsActivity extends AppCompatActivity {
 
 
     RangeBar timebar, moneybar;
     GaddiView gaddiView;
+    TextView txtReturn;
+    float rate;
+    int time, amount;
+
+    DecimalFormat df = new DecimalFormat("0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +32,15 @@ public class InvestmentsActivity extends AppCompatActivity {
         switch (investmentNum) {
             case 0:
                 investmentDescription.setText(R.string.mutual_liquid_funds);
+                rate = 8.5f;
                 break;
             case 1:
                 investmentDescription.setText(R.string.public_provident_fund);
+                rate = 8.1f;
                 break;
             case 2:
                 investmentDescription.setText(R.string.fixed_deposit);
+                rate = 7f;
                 break;
 
         }
@@ -42,22 +52,29 @@ public class InvestmentsActivity extends AppCompatActivity {
         timebar = (RangeBar) findViewById(R.id.rangebarTime);
         moneybar = (RangeBar) findViewById(R.id.rangebarMoney);
         gaddiView = (GaddiView) findViewById(R.id.gaddiView);
+        txtReturn = (TextView) findViewById(R.id.txt_return);
 
         timebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
             @Override
             public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
                                               int rightPinIndex,
                                               String leftPinValue, String rightPinValue) {
+                time = Integer.parseInt(rightPinValue);
+                calculateReturn();
 
             }
         });
-        timebar.setSeekPinByValue(0);
+        timebar.setSeekPinByValue(1);
 
         moneybar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
             @Override
             public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
                                               int rightPinIndex,
                                               String leftPinValue, String rightPinValue) {
+
+                amount = Integer.parseInt(rightPinValue);
+                calculateReturn();
+
                 if (Integer.parseInt(rightPinValue) <= 750) {
                     gaddiView.setCoinLevel(1);
                 } else if (Integer.parseInt(rightPinValue) > 750 && Integer.parseInt(rightPinValue) <= 1000) {
@@ -72,5 +89,11 @@ public class InvestmentsActivity extends AppCompatActivity {
         moneybar.setSeekPinByValue(500);
 
         gaddiView.setCoinLevel(1);
+    }
+
+    private void calculateReturn() {
+
+        double returnAmount = amount * Math.pow((1 + (rate / 100)), time);
+        txtReturn.setText("Return amount - "+df.format(returnAmount) + "*");
     }
 }
