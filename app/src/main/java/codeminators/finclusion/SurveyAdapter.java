@@ -1,5 +1,6 @@
 package codeminators.finclusion;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,18 @@ public class SurveyAdapter extends RecyclerView.Adapter<SurveyAdapter.ViewHolder
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.optionText.setText(mDataset.get(position));
+        switch (position){
+            case 0 : holder.optionImage.setImageResource(R.drawable.girl);
+                break;
+            case 1 : holder.optionImage.setImageResource(R.drawable.woman);
+                break;
+            case 2 : holder.optionImage.setImageResource(R.drawable.gas);
+                break;
+            case 3 : holder.optionImage.setImageResource(R.drawable.suit);
+                break;
+            case 4 : holder.optionImage.setImageResource(R.drawable.notes);
+                break;
+        }
     }
 
     @Override
