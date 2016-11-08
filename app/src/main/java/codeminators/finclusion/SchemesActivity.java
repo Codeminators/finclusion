@@ -42,8 +42,8 @@ public class SchemesActivity extends AppCompatActivity {
         myDataset.add("Daughter under 10 years?");
         myDataset.add("Woman in the household?");
         myDataset.add("LPG connection?");
-        myDataset.add("Employed?");
-        myDataset.add("Annual income?");
+        myDataset.add("Job?");
+        myDataset.add("Annual income below poverty line?");
         mAdapter = new SurveyAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
 
